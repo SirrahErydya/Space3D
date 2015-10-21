@@ -1,0 +1,129 @@
+% !TEX program = arara
+% arara: pdflatex
+% arara: biber
+% arara: pdflatex
+% arara: pdflatex
+% arara: clean: { files: [ projektplan.out ] }
+% arara: clean: { files: [ projektplan.aux, projektplan.bbl ] }
+% arara: clean: { files: [ projektplan.bcf, projektplan.blg ] }
+% arara: clean: { files: [ projektplan.log, projektplan.run.xml ] }
+% arara: clean: { files: [ projektplan.toc, projektplan-blx.bib ] }
+% 
+
+\documentclass{Ausarbeitung}
+
+\begin{document}
+
+\maketitle
+
+% % % % %
+
+\section*{Inhalt}
+\tableofcontents
+\clearpage
+\section*{Version und Änderungsgeschichte}
+
+	{\em Die aktuelle Versionsnummer des Dokumentes sollte eindeutig und gut zu
+	identifizieren sein, hier und optimalerweise auf dem Titelblatt.}
+
+	\begin{tabular}{ccl}
+		Version & Datum & Änderungen \\
+		\hline
+		1.0 & TT.MM.JJJJ & Erste veröffentlichte Version. \\
+		1.1 & TT.MM.JJJJ & Zeitplanung für die Anforderungsspezifikation hinzugefügt. \\
+		1.2 & TT.MM.JJJJ & .... 
+	\end{tabular}
+\clearpage
+\section{Einleitung}
+	\subsection{Projektübersicht}\label{ubersicht}
+		\subsubsection{Die Idee}\label{idee}
+			\textit{Space3D} (Arbeitstitel) soll eine 3D-Anwendung für die Occulus Rift werden, die dem Benutzer einen ''Besuch im Weltall'' vortäuschen soll. Es wird fünf Minispiele geben, von denen der Benutzer zu Beginn eines auswählen darf. In Jedem macht er eine andere spielerische Erfahrung, die sich zu den anderen besonders in ihrer Interaktivität und im Ausgang, aber auch in Umgebung, Realistik und Prämisse unterscheidet. Es kommt bei dieser Anwendung nicht hauptsächlich darauf an, einen realistischen Eindruck vom Weltall oder Reisen durch das Weltall zu geben. Demnach handelt es sich hierbei nicht um eine wissenschaftliche Simulation, sondern vielmehr um eine Applikation zum Vergnügen des Nutzers, aber auch um eine spielerisch überbrachte Botschaft (dieser Aspekt wird unter der Überschrift \ref{ziele} noch einmal genauer erklärt). \\
+			Diese Arbeit wurde innerhalb des Kurses \textit{Gestalterische Grundlagen 2} bei Nuri Ovüc unter dem Thema \textit{Zeit} begonnen. Demnach wird Zeit, besonders im Bezug zu astronomischen Phänomen, eine zentrale Rolle in jedem der fünf Minispiele darstellen.
+		\subsubsection{Ziele und Zweck}
+		\label{ziele}
+			In jedem Minispiel soll ein anderes Ziel erarbeitet werden. Welche genau wird im Abschnitt \ref{formElemente} genauer spezialisiert. Es soll neben diesen ''spielerischen Zielen'' (solche könnten beispielsweise Ziele wie \textit{Erreiche Punktzahl xy} oder \textit{Gelange an einen bestimmten Ort} sein) ein ''philosophisches Ziel'' geben. Jedes Minispiel soll dem Spieler eine Botschaft überbringen, die diesem im optimalen Fall durch die Form wie er das spielerische Ziel erreicht hat, klar wird. Diese Botschaften spielen mehr oder weniger indirekt auf Zeit, besonders auf Zeitnutzung oder Zeitempfinden im philosophischen Zusammenhang ab, sowie auch auf gewisse negative menschlichen Eigenschaften, wie Furcht vor dem Unbekannten und Kompensation durch Hass oder übersteigertes Selbstempfinden und Egozentrik. \\ 
+			Auch wenn in der Vorstellung der Projektidee erwähnt wurde, dass es sich nicht um eine realitätsnahe Simulation handeln wird, sollen doch einige wissenschaftliche Phänomene, wie bestimmte Wahrnehmungsaspekte aufgrund der Relativität von Zeit und Raum. 
+		\subsubsection{Benötigte Ressourcen}
+		\label{ressourcen}
+	\subsection{Zeitplan}
+	\label{plan}
+	\subsection{Auszulieferndes Produkt}
+	\label{produkt}
+	\subsection{Definitionen, Akronyme und Abkürzungen}
+	\label{glossar}
+\clearpage
+\section{Anforderungen}
+\label{anforderungen}
+	\subsection{Datenmodell}
+	\label{datenmodell}
+	\subsection{Aktionen}
+	\label{aktionen}
+	\subsection{Softwaresystemattribute}
+	\label{attribute}
+	\subsection{Schnittstellen}
+	\label{interfaces}
+			\subsubsection{Hardwareschnittstellen}
+			\label{hardwareI}
+			\subsubsection{Softwareschnittstellen}
+			\label{SoftwareI}
+			\subsubsection{Benutzerschnittstellen}
+			\label{userI}
+\clearpage
+\section{Architektur}
+\label{architektur}
+	\subsection{Globale Analyse}
+	\label{globAnalyse}
+		\subsubsection{Einflussfaktoren}
+		\label{einfluss}
+		\subsubsection{Probleme und Strategien}
+		\label{probleme}
+	\subsection{Implementierungsdetails}
+	\label{details}
+		\subsubsection{Hardware}
+		\label{hardware}
+		\subsubsection{Software}
+		\label{software}
+\clearpage
+\section{Die Anwendung}
+\label{anwendung}
+	\subsection{Übersicht über die Minispiele}
+	\label{minispiele}
+		\subsubsection{A lifetime flight}
+		\subsubsection{Space Speedrun}
+		\subsubsection{Human Encounter}
+		\subsubsection{--Placeholder--}
+		\subsubsection{--Placeholder--}
+	\subsection{Formale Elemente}
+	\label{formElemente}
+		\subsubsection{Spieler}
+		\subsubsection{Ziele}
+		\label{formZiele}
+		\subsubsection{Züge}
+		\subsubsection{Regeln}
+		\subsubsection{Ressourcen}
+		\subsubsection{Konflikt}
+		\subsubsection{Grenzen}
+	\subsection{Dramatische Elemente}
+	\label{dramElemente}
+		\subsubsection{Play}
+		\subsubsection{Prämisse}
+		\subsubsection{Charaktere}
+		\subsubsection{Geschichte}
+\clearpage
+\section{Testprotokoll}
+\label{test}
+	\subsection{Modultests}
+	\label{modultest}
+	\subsection{Akzeptanztests}
+	\label{akzeptanztest}
+\clearpage
+\section{Abschließende Evaluation}
+\label{Evaluation}
+
+
+%\clearpage
+\vfill %Zum Seitenende Verschieben
+\printbibliography
+
+\end{document}
+
