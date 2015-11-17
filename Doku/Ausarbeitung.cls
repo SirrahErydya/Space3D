@@ -85,7 +85,7 @@
 \renewcommand{\author}{Fenja Kollasch}
 \newcommand{\thissemester}{WiSe 2015/16}
 \newcommand{\thistopic}{Space3D - eine Anwendung für Occulus Rift}
-\newcommand{\thistitle}{Ausarbeitung \thistopic}
+\newcommand{\thistitle}{\thistopic}
 \newcommand{\shorttitle}{Space3D}
 \newcommand{\subtitle}{\thissemester \\Dozent: \dozent}
 \newcommand{\dozent}{Nuri Ovüc}

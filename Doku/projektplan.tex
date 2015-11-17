@@ -29,24 +29,41 @@
 	\begin{tabular}{ccl}
 		Version & Datum & Änderungen \\
 		\hline
-		1.0 & TT.MM.JJJJ & Erste veröffentlichte Version. \\
-		1.1 & TT.MM.JJJJ & Zeitplanung für die Anforderungsspezifikation hinzugefügt. \\
-		1.2 & TT.MM.JJJJ & .... 
+		1.0 & 30.08.2015 & Prototyp nur mit A lifetime flight \\
 	\end{tabular}
 \clearpage
 \section{Einleitung}
+\label{intro}
 	\subsection{Projektübersicht}\label{ubersicht}
 		\subsubsection{Die Idee}\label{idee}
-			\textit{Space3D} (Arbeitstitel) soll eine 3D-Anwendung für die Occulus Rift werden, die dem Benutzer einen ''Besuch im Weltall'' vortäuschen soll. Es wird fünf Minispiele geben, von denen der Benutzer zu Beginn eines auswählen darf. In Jedem macht er eine andere spielerische Erfahrung, die sich zu den anderen besonders in ihrer Interaktivität und im Ausgang, aber auch in Umgebung, Realistik und Prämisse unterscheidet. Es kommt bei dieser Anwendung nicht hauptsächlich darauf an, einen realistischen Eindruck vom Weltall oder Reisen durch das Weltall zu geben. Demnach handelt es sich hierbei nicht um eine wissenschaftliche Simulation, sondern vielmehr um eine Applikation zum Vergnügen des Nutzers, aber auch um eine spielerisch überbrachte Botschaft (dieser Aspekt wird unter der Überschrift \ref{ziele} noch einmal genauer erklärt). \\
-			Diese Arbeit wurde innerhalb des Kurses \textit{Gestalterische Grundlagen 2} bei Nuri Ovüc unter dem Thema \textit{Zeit} begonnen. Demnach wird Zeit, besonders im Bezug zu astronomischen Phänomen, eine zentrale Rolle in jedem der fünf Minispiele darstellen.
+			\textit{Space3D} (Arbeitstitel) soll eine 3D-Anwendung für die Occulus Rift werden, die dem Benutzer einen ''Besuch im Weltall'' vortäuschen soll. Es wird vier Minispiele geben, von denen der Benutzer zu Beginn eines auswählen darf. In Jedem macht er eine andere spielerische Erfahrung, die sich zu den anderen besonders in ihrer Interaktivität und im Ausgang, aber auch in Umgebung, Realistik und Prämisse unterscheidet. Es kommt bei dieser Anwendung nicht hauptsächlich darauf an, einen realistischen Eindruck vom Weltall oder Reisen durch das Weltall zu geben. Demnach handelt es sich hierbei nicht um eine wissenschaftliche Simulation, sondern vielmehr um eine Applikation zum Vergnügen des Nutzers, aber auch um eine spielerisch überbrachte Botschaft (dieser Aspekt wird unter der Überschrift \ref{ziele} noch einmal genauer erklärt). \\
+			Diese Arbeit wurde innerhalb des Kurses \textit{Gestalterische Grundlagen 2} bei Nuri Ovüc unter dem Thema \textit{Zeit} begonnen, wodurch Zeit, besonders im Bezug zu astronomischen Phänomenen, eine zentrale Rolle in jedem der  vier Minispiele darstellen.
 		\subsubsection{Ziele und Zweck}
 		\label{ziele}
 			In jedem Minispiel soll ein anderes Ziel erarbeitet werden. Welche genau wird im Abschnitt \ref{formElemente} genauer spezialisiert. Es soll neben diesen ''spielerischen Zielen'' (solche könnten beispielsweise Ziele wie \textit{Erreiche Punktzahl xy} oder \textit{Gelange an einen bestimmten Ort} sein) ein ''philosophisches Ziel'' geben. Jedes Minispiel soll dem Spieler eine Botschaft überbringen, die diesem im optimalen Fall durch die Form wie er das spielerische Ziel erreicht hat, klar wird. Diese Botschaften spielen mehr oder weniger indirekt auf Zeit, besonders auf Zeitnutzung oder Zeitempfinden im philosophischen Zusammenhang ab, sowie auch auf gewisse negative menschlichen Eigenschaften, wie Furcht vor dem Unbekannten und Kompensation durch Hass oder übersteigertes Selbstempfinden und Egozentrik. \\ 
-			Auch wenn in der Vorstellung der Projektidee erwähnt wurde, dass es sich nicht um eine realitätsnahe Simulation handeln wird, sollen doch einige wissenschaftliche Phänomene, wie bestimmte Wahrnehmungsaspekte aufgrund der Relativität von Zeit und Raum. 
+			Auch wenn in der Vorstellung der Projektidee erwähnt wurde, dass es sich nicht um eine realitätsnahe Simulation handeln wird, sollen doch einige wissenschaftliche Phänomene realisiert, wie bestimmte Wahrnehmungsaspekte aufgrund der Relativität von Zeit und Raum. 
 		\subsubsection{Benötigte Ressourcen}
+			Das Projekt wird mit der Unity3D Engine erstellt und soll in der Sprache C\# programmiert werden. Es soll möglich sein, die Software sowohl auf dem Computer (unter Windows und Linux), als auch mit der VR-Brille Occulus Rift zu verwenden. \\
 		\label{ressourcen}
+	\clearpage
 	\subsection{Zeitplan}
-	\label{plan}
+			\label{plan}
+			\begin{tabular}{@{}ll@{}}
+				\hline
+				Deadline   & Aktivität                       \\ \hline
+				14.09.2015 & Projektbeginn                   \\
+				15.09.2015 & Beginn der Konzepterstellung    \\
+				01.10.2015 & Beginn der Prototyperstellung   \\ 
+				04.11.2015 & Validierung des groben Konzepts \\ 
+				11.11.2015 & Ggf. Überarbeitung des Konzepts \\
+				12.11.2015 & Beginn mit der Implementierung (PC) \\
+				05.01.2016 & Vorstellung der PC-Version \\
+				06.01.2016 & Ggf. Überarbeitung der Version \\
+				12.01.2016 & Occulus Rift Version übertragen \\
+				27.01.2016 & Fertiges Produkt vorstellen und validieren \\
+				05.01.2016 & Ggf. Änderungen \\
+				07./08.02.2016 & Präsentation während der Hochschultage \\ \hline
+			\end{tabular}
 	\subsection{Auszulieferndes Produkt}
 	\label{produkt}
 	\subsection{Definitionen, Akronyme und Abkürzungen}
@@ -89,26 +106,81 @@
 	\subsection{Übersicht über die Minispiele}
 	\label{minispiele}
 		\subsubsection{A lifetime flight}
+			In dieser Minianwendung ist keine Interaktion vom Spieler gefragt. Der Spieler fliegt (scheinbar) durchs Weltall, wobei die Geschwindigkeit immer weiter beschleunigt wird. Nach etwa zwei Minuten Flugzeit erreicht man einen Stern, der das Ende seiner Lebenszeit erreicht hat und abschließend explodiert. Es erscheint ein Schriftzug: \textit{Not even stars last forever. Don't waste your time}. \\
+			Die Reise durch das Weltall mit dem sterbenden Stern als Ziel soll hier ein Leben darstellen. Als Kind kommt einem jeder einzelne Tag furchtbar lang vor, was dadurch bedingt ist, dass man jeden Tag neue Dinge lernt und demnach viel mehr Dinge verarbeitet werden müssen. Je älter man wird, desto kürzer erscheint einem jeder einzelne Tag. Eh man sich versieht ist er vorbei, ist eine Woche vorbei, ist ein Monat vorbei, ist ein Jahr vorbei. Die Geschwindigkeit der Zeit scheint sich von Tag zu Tag zu beschleunigen, was bei \textit{A lifetime flight} buchstäblich durch die immer zunehmende Beschleunigung dargestellt wird. Am Ende des Lebens wartet der Tod auf einen. Dies wird dargestellt durch eine imposante Sternexplosion (Supernova). \\
+			Da diese Botschaft vermutlich nur durch das Erlebnis nicht ganz klar wird, erscheint nachdem die verbliebenen Gase des Sterns verschwunden sind, genannter Schriftzug der den Zusammenhang verdeutlichen soll. \\
+			Es ist Absicht, dass der Spieler in dieser Anwendung nicht in das Geschehen eingreifen kann. Dies soll symbolisieren, dass das Leben seinen Lauf nimmt, ganz egal wie man diesen Lauf gestaltet. Am Ende kommt es immer auf das selbe hinaus. 
 		\subsubsection{Space Speedrun}
+			Ähnlich wie \textit{A lifetime flight} ist \textit{Space Speedrun} ein ''Pseudospiel'', bei dem es nicht wirklich um ein Spaßerlebnis geht, sondern um die Erkenntnis einer Tatsache. \\
+			Dem Spieler wird vorgemacht er säße in einem Raumschiff. Das Spiel fordert ihn auf zu beschleunigen, was er mittels Drücken einer Taste auch tun kann. Allerdings sieht man nicht wie im zuvor genannten Spiel Sterne und Nebel an einem vorbeisausen, sodass man auch wirklich das Gefühl von Beschleunigung hat. In diesem Spiel nähert sich die Darstellung der Geschwindigkeit wissenschaftlicher Korrektheit. \\
+			Im Weltall herrschen riesige Distanzen. Der Stern, der der Erde am nächsten gelegen ist, ist etwa fünf Lichtjahre entfernt. Auch wenn man viele tausende Stundenkilometer schnell reist, so hat man trotzdem nicht das Gefühl sich zu bewegen, weil über riesige Flächen kein einziges Objekt ist und somit auch nichts, an dem man die Geschwindigkeit festmachen kann. Selbst wenn man einige hundert Lichtjahre in der Sekunde schafft, was wirklich eine übernatürlich hohe Geschwindigkeit ist, so hat man nicht das Gefühl, sonderlich schnell zu fliegen. Zwar sieht man schon, wie Sterne an einem vorbeiziehen, allerdings geschieht dies langsam und nicht sonderlich spektakulär.
+			Dem Spieler soll oben in der Ecke seine Geschwindigkeit angezeigt werden. Obgleich ihm eine astronomisch hohe Zahl angezeigt wird, wird er nicht das Gefühl haben, eine sonderliche Beschleunigung errungen zu haben. Das Spiel soll also willkürlich eine Enttäuschung beim Spieler auslösen. \\
+			Je schneller der Spieler fliegt, desto mehr Druck macht das Spiel, der Spieler möge doch bitte noch schneller fliegen. Sobald er die Galaxie verlässt, ist das Spiel ''gewonnen''. In einem Abspann wird dem Spieler erklärt, wieso der Spielverlauf so enttäuschend war. Ziel der Anwendung ist es, dem Spieler klarzumachen, wie klein wir Menschen im Vergleich zu den riesigen Größenordnungen im Weltall sind.
+			
 		\subsubsection{Human Encounter}
-		\subsubsection{--Placeholder--}
-		\subsubsection{--Placeholder--}
+			Hier soll nun zum ersten Mal ein spielerisches Erlebnis im klassischen Sinne stattfinden. \\
+			Der Spieler spielt ein Alien nach den gängigen Klischees (klein, grün), das sich auf seinem täglichen Patrouillenflug durch das All befindet. Auf seinem Weg trifft es auf eine seltsame fremdartige Spezies (Menschen). \\
+			Dem Spieler wird die Geschichte als Prolog in Textform angezeigt. Sobald er das menschliche Raumschiff erreicht, wird ihm als Auftrag angezeigt, die fremden Wesen zu begrüßen. Dabei kann sich der Spieler selbst entscheiden, ob er wirklich auf sie zugehen möchte, oder aber sie direkt mit dem Laser angreift. In beiden Fällen geht das Spiel gleich aus: Die menschlichen Raumschiffe beginnen den Spieler anzugreifen. Der Auftrag lautet weiterhin, die Menschen freundlich in Empfang zu nehmen, allerdings verliert der Spieler bei jedem Schuss, den er vom Menschen kassiert, Leben. Es ist dem Spieler freigestellt zu reagieren, wie er es will. Er kann die menschlichen Raumschiffe abschießen. Das wäre besonders bei erfahrenen Spielern die naheliegenste Lösung. Hat er alle Raumschiffe vernichtet, endet das Spiel damit, dass dem Spieler mitgeteilt wird, er habe sich ''äußert menschlich'' diesem Konflikt gestellt. \\
+			Es gibt auch eine alternative Lösung. Das Spiel wird den Spieler anweisen, deutlich zu machen, dass seine Absichten friedlich sind. Unter den Raumschiffen gibt es eines, das sich von den anderen Schiffen deutlich unterscheidet. Schafft der Spieler es, das Schiff zu erreichen ohne vorher zu sterben, wird ein Dialog zwischen der Alien-Spielfigur und dem Besitzer des Raumschiffes, einem kleinen Jungen, sichtbar, in dem das Alien erklärt, dass es keinerlei gewalttätige Absichten hat und der Junge daraufhin verspricht, den anderen Menschen Entwarnung zu geben. Danach ist das Spiel gewonnen. \\
+			Da insbesondere die beiden vorhergehenden Minispiele vermutlich das Misstrauen des Spielers erregt haben und die Spielererfahrung dahingehend zielt, Gegner, die einen angreifen zurückzuattakieren, um zu gewinnen, werden die meisten Spieler vermutlich die erste Lösungsstrategie wählen. Dies soll eine Kritik an den Fremdenhass und die Gewaltbereitschaft sein, die viele Menschen aufweisen.
+			
+		\subsubsection{An awful waste of time}
+			Das Spiel wird wieder mit einer Figur eröffnet, die durchs All fliegt. Diesmal ist das Ziel des Spiels, kleine Meteoroidenstückchen einzusammeln, die in der Umgebung umherschweben. Dabei darf man sich nicht von den größeren Meteoroiden erwischen lassen. Oben in der Ecke wird angezeigt, wie schnell die Spielfigur fliegt. Sobald der Spieler genügend davon gesammelt hat, ist das Spiel gewonnen. Im Grunde genommen handelt es sich hierbei also um ein klassisches Minispiel. \\
+			Ist das Spiel allerdings beendet wird eine Karte der Erde angezeigt. Dadurch dass der Spieler schneller als Lichtgeschwindigkeit geflogen ist, ist die zeit für ihn selbst aufgrund der Relativität von Zeit und Raum langsamer vergangen, als auf der Erde. Umgekehrt bedeutet dies, dass abhängig davon, wie lange der Spieler wie schnell geflogen ist, Unmengen an Zeit auf der Erde vergangen sind. Wenige Minuten für den Spieler könnten also umgerechnet viele jahre für alle anderen auf der Erde gewesen sein, in denen sich auch viel auf der Erde verändert hat. \\
+			Hier wird wieder, ähnlich wie bei \textit{A lifetime flight} auf Zeitverwendung angespielt.
+			
 	\subsection{Formale Elemente}
 	\label{formElemente}
 		\subsubsection{Spieler}
+			Vorerst soll die Anwendung ein Spiel vom Typ \textit{Single Player vs. Game} sein. Das bedeutet, es gibt nur einen Spieler, der gegen computergesteuerte Figuren (Bots) oder gegen die Zeit antritt. Eine mögliche Erweiterung könnte sein, dass man Mehrspielermodi für einige der Minispiele entwickelt, sodass bei \textit{Human Encounter} beispielsweise zwei Spieler gegen die Aliens antreten und man so beobachten kann, welche Strategien die beiden verfolgen. \\
+			Eine Erweiterung hinsichtlich eines \textit{Player vs. Player}-Systems für die bisher genannten Spiele nicht zur Debatte, da so das eigentliche Ziel nicht unterstützt wird. Möglich wäre allerdings das Hinzufügen weiterer Minispiele von denen eines ein \textit{Player vs. Player}-System unterstützen würde. \\
+			
 		\subsubsection{Ziele}
 		\label{formZiele}
+			Wie bereits mehrfach erwähnt, hat jedes Minispiel seine eigenen Ziele, die bereits im Abschnitt \ref{minispiele} erläutert wurden. Allerdings gibt es für die Anwendung im Gesamten ein ''verstecktes'' Ziel. Dieses lautet, für jedes Minispiel die optimale Lösung zu finden. Bei einigen ist das sicherlich banal, beispielsweise bei \textit{A lifetime flight}, wo der Spieler überhaupt keinen Einfluss auf das Spielgeschehen nehmen kann. \\
+			Für den Fall, dass dieses Ziel erreicht wird, erhält der Spieler eine Meldung, die ihm zu seinen Entscheidungen gratuliert.
+			
 		\subsubsection{Züge}
+			Da es sich um eine 3D-Anwendung handelt, wird die Steuerung über die Steuerschnittstelle der VR-Brille und über natürliche Bewegungen bestimmt. Am Computer agiert der Spieler über Maus und Tastatur. \\
+			Es wird sich bei keinem der Spiele um zugbasierte Spiele handeln, das heißt die Nichtspielercharaktere (NPCs) sowie die Spieler können sich unabhängig voneinander bewegen. von \textit{A lifetime flight} abgesehen muss der Spieler bei jeder Anwendung aktiv steuern.
+			
 		\subsubsection{Regeln}
+			In allen Spielen hat der Spieler die Möglichkeit sich durch Drehen des Kopfes bzw. am Computer durch Bewegen der Maus in dem Raum, in dem er sich befindet, umzusehen. Dabei verändert er im Normalfall nicht seine aktuelle Position.
+			\paragraph*{A lifetime flight}
+				Der Spieler ist vollkommen eingeschränkt. Das Spiel wird weniger als ein Spiel per se, sondern viel mehr als semiinteraktive viedosequenz betrachtet. Dabei bleibt dem Spieler die Möglichkeit, sich in der Welt umzuschauen, in die er gebracht wird. Es gibt eine feste Flugrichtung, aus der nicht ausgebrochen werden kann.
+				
+			\paragraph*{Space Speedrun}
+				Drückt der Spieler die ihm vom Spiel mitgeteilte Taste, beschleunigt er seinen Flug exponentiell. Im Gegensatz zu den anderen Spielen fliegt er in diesem in die Richtung, in die er auch guckt, demnach kann er seinen Kurs hier selbst bestimmen.
+			
+			\paragraph*{Human Encounter}
+				Der Spieler ist in seiner Bewegung nicht eingeschränkt, wie es bei vielen anderen Spielen der Fall ist. Demnach kann er der Konfrontation mit den Gegnern auch entgehen, wenn er vor ihnen flieht. Er hat eine Lebensanzeige. Diese leert sich, je öfter ihn ein Schuss von den NPCs trifft. Ist die Lebensanzeige leer, ist das Spiel verloren. Trifft der Spieler mit einem von ihm getätigten Schuss einen NPC, so stirbt dieser sofort. Ein Schuss kann nur abgefeuert werden, wenn Munition vorhanden ist. Diese ist begrenzt und kann nicht wieder aufgefrischt werden.
+				
+			\paragraph*{An awful waste of time}
+				Diesmal ist der Bewegungsraum auf ein bestimmtes Areal beschränkt. In diesem kommen Meteoroiden herunter. Auch hier hat der Spieler eine Lebensleiste, die sinkt, wenn er von einem Meteoroiden getroffen wird. 
+			
 		\subsubsection{Ressourcen}
+			Ressourcen im klassischen Sinne gibt es nur in \textit{Human Encounter} und \textit{An awful waste of time}. Bei ersterem muss der Spieler ein bunt bemaltes Raumschiff erreichen, um den optimalen Sieg in diesem Spiel zu erreichen. Bei letzterem muss man Meteoroidenteilchen einsammeln, bis man eine gewisse Zahl erreicht hat.
+			
 		\subsubsection{Konflikt}
-		\subsubsection{Grenzen}
+			\paragraph*{A lifetime flight}
+				Einen direkten Konflikt gibt es hier nicht. Das ''Ziel'' des Spiels wird automatisch erreicht.
+				
+			\paragraph*{Space Speedrun}
+				Das Spiel übt Zeitdruck auf den Spieler aus, was ihn nervös machen wird. Rein technisch gesehen ist der Zeitkonflikt in diesem Spiel aber gar nicht zu umgehen.
+			
+			\paragraph*{Human Encounter}
+				Die menschlichen Raumschiffe hindern den Spieler daran, das bunte Raumschiff zu erreichen. Des Weiteren entfernt sich das bunte Schiff, wenn sich der Spieler ihm nähert. Alle Raumschiffe bewegen sich, sodass es schwieriger ist, sie abzuschießen.
+				
+			\paragraph*{An awful waste of time}
+				Die umherfliegenden Meteoroiden verletzen den Spieler, wenn er sich ihnen nähert. Er muss warten, bis sie in kleinere Stücke zerbrechen, damit er sie einsammeln und so sein Ziel erreichen kann. 
+				
 	\subsection{Dramatische Elemente}
 	\label{dramElemente}
 		\subsubsection{Play}
-		\subsubsection{Prämisse}
-		\subsubsection{Charaktere}
-		\subsubsection{Geschichte}
+			Das Spiel profitiert sehr vom Reiz des Unbekannten, den der Spieler besitzt. Es zeigt eine völlig neue Umgebung, die der Spieler durch dreidimensionale Animation erleben kann. Er kann sich frei umschauen in den meisten Spielen und in einigen auch frei durch die Welt bewegen. 
+		\subsubsection{Prämisse, Charaktere und Geschichte}
+			All diese Elemente, die normalerweise typische dramatische Elemente eines Spiels beschreiben, werden hier nicht verwendet. Es gibt keine explizite Story (am ehesten vielleicht bei \textit{Human Encounters}) und auch nichts, das sich daraus entwickelt. \\
+			Der Grund dafür ist, dass es sich bei der Anwendung, wie schon in der Einleitung (siehe \ref{intro}) erwähnt nicht direkt um ein Spiel im klassischen Sinne handelt. Es ist gewünscht, dass der Benutzer eine spielerische Erfahrung macht, deshalb sind viele formale Elemente eines Spiels anzutreffen. Auf den Großteil der dramatischen Elemente hingegen wurde verzichtet, um den Fokus des Benutzers nicht auf ein tolles Spielerlebnis, sondern auf die Erfahrung an sich zu lenken.
 \clearpage
 \section{Testprotokoll}
 \label{test}
