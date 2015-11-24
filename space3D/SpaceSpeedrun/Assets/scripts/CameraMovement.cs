@@ -3,9 +3,9 @@ using System.Collections;
 
 public class CameraMovement : MonoBehaviour {
 
-	public float velocity = 0.1F;
+	public static float velocity = 0.001F;
 	public float acceleration = 1F;
-	public float increase = 1.0001F;
+	public float increase = 1.001F;
 
 	private static Transform tx;
 	
@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space)) {
+		if(Input.GetKey(KeyCode.Space)&& velocity < 0.1) {
 			acceleration = acceleration * increase;
 			velocity = velocity * acceleration;
 		}
