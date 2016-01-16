@@ -6,10 +6,19 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cage
+    100004: Sphere
     400000: //RootNode
+    400002: Cage
+    400004: Sphere
     2300000: //RootNode
+    2300002: Cage
+    2300004: Sphere
     3300000: //RootNode
+    3300002: Cage
+    3300004: Sphere
     4300000: Sphere
+    4300002: Cage
     7400000: Default Take
     9500000: //RootNode
   materials:
