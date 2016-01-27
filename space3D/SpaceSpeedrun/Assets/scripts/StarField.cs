@@ -28,6 +28,7 @@ public class StarField : MonoBehaviour {
 		starDistanceSqr = starDistance * starDistance;
 		starClipDistanceSqr = starClipDistance * starClipDistance;
 		ps = GetComponent<ParticleSystem> ();
+		createStars ();
 
 	}
 
@@ -41,21 +42,29 @@ public class StarField : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (stars == null) {
+		if (stars == null && CameraMovement.Velocity < 0.3F) {
 			createStars();
 		}
 
-		for (int i=0; i < starsMax; i++) {
-			if((stars[i].position - tx.position).sqrMagnitude > starDistanceSqr) {
-				stars[i].position = Random.insideUnitSphere * starDistance + tx.position;
-			}
-
-			if((stars[i].position - tx.position).sqrMagnitude <= starClipDistanceSqr) {
-				float percent = (stars[i].position - tx.position).sqrMagnitude / starClipDistanceSqr;
-				stars[i].color = new Color (1,1,1, percent);
-			}
+		if (CameraMovement.Velocity >= 0.3F) {
+			StartCoroutine(allOff ());
 		}
-		ps.SetParticles(stars, stars.Length);
+
+		if (stars != null) {
+			for (int i=0; i < starsMax; i++) {
+				if ((stars [i].position - tx.position).sqrMagnitude > starDistanceSqr) {
+					stars [i].position = Random.insideUnitSphere * starDistance + tx.position;
+				}
+
+				if ((stars [i].position - tx.position).sqrMagnitude <= starClipDistanceSqr) {
+					float percent = (stars [i].position - tx.position).sqrMagnitude / starClipDistanceSqr;
+					stars [i].color = new Color (1, 1, 1, percent);
+				}
+			}
+			ps.SetParticles (stars, stars.Length);
+		}
+
+
 	}
 
 	private Color randomColor() {
@@ -82,5 +91,11 @@ public class StarField : MonoBehaviour {
 		}
 
 		return color;
+	}
+
+	IEnumerator allOff() {
+		yield return new WaitForSeconds (10);
+		stars = null;
+		Camera.main.clearFlags = CameraClearFlags.SolidColor;
 	}
 }

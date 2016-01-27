@@ -25,7 +25,7 @@ public class Movable : MonoBehaviour {
 
 	protected void shoot(Vector3 position, Quaternion rotation) {
 		Object shooterClone = Instantiate(shooter, transform.position+position, transform.rotation * rotation);
-		Destroy ((shooterClone as Transform).gameObject, 5);
+		Destroy ((shooterClone as Transform).gameObject, 1);
 	}
 	
 }

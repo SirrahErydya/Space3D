@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Shooter : MonoBehaviour {
 	public float speed;
-	public Transform target;
 	public float smooth;
 
 	private Vector3 zIncrease;

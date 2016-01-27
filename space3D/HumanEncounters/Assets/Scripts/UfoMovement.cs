@@ -7,6 +7,11 @@ public class UfoMovement : Movable {
 	private Vector3 xTrans;
 	private Vector3 yTrans;
 	private Vector3 zTrans;
+	private static float life;
+	public static float Life {
+		get {return life;}
+		set {life = value;}
+	}
 
 	//Input bools
 	bool w;
@@ -20,6 +25,7 @@ public class UfoMovement : Movable {
 	// Use this for initialization
 	void Start () {
 		velocity = START_VELOCITY;
+		life = 10;
 
 		xTrans = new Vector3 (trans, 0, 0);
 		yTrans = new Vector3 (0, trans, 0);
@@ -29,6 +35,10 @@ public class UfoMovement : Movable {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(life == 0) {
+			Destroy(gameObject);
+		}
 
 		w = Input.GetKey (KeyCode.W);
 		s = Input.GetKey (KeyCode.S);
@@ -88,6 +98,13 @@ public class UfoMovement : Movable {
 	Vector3 dodge(Vector3 direction) {
 		return transform.position = Vector3.Lerp (transform.position, transform.position + direction, Time.deltaTime * smooth);
 	}
-	
+
+	void OnTriggerEnter(Collider other) {
+		if(other.CompareTag("Finish")) {
+			Destroy (other.gameObject);
+			Destroy (gameObject);
+		}
+	}
+		
 
 }
